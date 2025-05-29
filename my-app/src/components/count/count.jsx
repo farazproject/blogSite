@@ -9,11 +9,11 @@ function Counter() {
   return (
     <div>
       <h1>Counter: {count}</h1>
-      <button onClick={() => dispatch(increment())}> + </button>
-      <button onClick={() => dispatch(decrement())}> - </button>
+      <button onClick={() => dispatch(increment())}> + </button> <br />
+      <button onClick={() => dispatch(decrement())}> - </button> <br />
       <button onClick={() => dispatch(reset())}> Reset </button>
     </div>
   );
 }
 
-export default Counter;
+export default Counter
