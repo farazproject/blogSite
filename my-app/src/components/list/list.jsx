@@ -16,7 +16,7 @@ function List() {
 
 
   const removeUser = (indexToRemove, userId) => {
-    axios.delete('https://jsonplaceholder.typicode.com/posts/${userId}')
+    axios.delete(`https://jsonplaceholder.typicode.com/posts/${userId}`)
     .then(() => {
         console.log(`user with ID ${userId} removed`);
         setUsers(users.filter((_, index ) => index !== indexToRemove));
@@ -30,27 +30,26 @@ function List() {
   }, []);
 
   return (
-    <div className="h-100 w-full flex items-center justify-center bg-teal-lightest font-sans">
-      <div className="bg-black rounded shadow p-6 m-4 w-full lg:w-3/4 lg:max-w-lg">
-        
-          <h1 className="text-grey-darkest">User List</h1>
-          <ul>
-            {users.map((user, index) => (
-              <li
-                key={user.id}
-                className="flex flex-row justify-between items-center mb-2 text-white"
+      <div className="flex items-center justify-center bg-gray-900 mt-50px">
+      <div className="bg-gray-800 text-white rounded-lg shadow-lg p-6 mt-10 w-full max-w-xl">
+        <h1 className="text-2xl font-bold mb-4 text-center">User List</h1>
+        <ul className="divide-y divide-gray-700">
+          {users.map((user, index) => (
+            <li
+              key={user.id}
+              className="flex justify-between items-center py-3"
+            >
+              <span className="text-lg font-semibold">{user.title}</span>
+              <button
+                onClick={() => removeUser(index, user.id)}
+                className="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-lg transition"
+                aria-label={`Remove ${user.title}`}
               >
-                <span>
-                  {user.name}
-                </span>
-                <button onClick={()=> removeUser(index, user.id)}   className="flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red hover:text-white hover:bg-red"
-                aria-label="{'Remove ${user.name}'}" >
-                  X
-                </button>
-              </li>
-            ))}
-          </ul>
-        
+                Remove
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
