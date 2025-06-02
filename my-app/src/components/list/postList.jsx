@@ -15,7 +15,7 @@ dispatch(fetchPosts());
 if (status === 'loading') return <p>Loading...</p>;
 if (status === 'failed') return <p>Error: {error}</p>;
 return (
-<div className="mt-[400px]"> 
+<div className="mt-[400nppx]"> 
 <h2 >Posts</h2>
 {items.map((post) => (
 <div key={[post.id]}>

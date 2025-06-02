@@ -1,15 +1,9 @@
 import React from "react";
-import Counter from "@/components/count/count";
-import Authen from "../components/auth/auth";
-import PostsList from "@/components/list/postList";
 import Header from "@/components/header/header";
-
-
 
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
-import List from "@/components/list/list";
-import Authentic from "@/components/auth/auth";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,13 +22,8 @@ export default function Home() {
     >
 
       <Header/>
-      
-       <List/>
-       <Counter/>
-      <Authen/>
-
-    <PostsList/>
 
     </div>
   );
 }
+
