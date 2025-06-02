@@ -1,6 +1,7 @@
 import React from "react";
 import Counter from "@/components/count/count";
 import Authen from "../components/auth/auth";
+import PostsList from "@/components/list/postList";
 
 
 
@@ -27,6 +28,8 @@ export default function Home() {
       {/* <List/> */}
       <Counter/>
       <Authen/>
+
+    <PostsList/>
 
     </div>
   );
