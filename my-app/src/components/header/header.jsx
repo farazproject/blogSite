@@ -10,6 +10,7 @@ function Header(){
         { name: 'Home', url: '/' },
         { name: 'Cart', url: '/shopping-cart' },
         { name: 'Contact', url: '/contact'},
+        { name: 'Posts', url: '/posts' },
     ]
 
     return(
@@ -17,7 +18,7 @@ function Header(){
         <div className=" bg-white w-full p-2 flex justify-between items-center">
             <Image src={logo} height={100} width={100} objectFit="contain"/> 
             <div className="flex gap-[15px] items-center">
-                <ul className="flex gap-[6px]">
+                <ul className="flex gap-[6px]">gi
                     
                     {
                         navLinks.map((nav, index) =>{

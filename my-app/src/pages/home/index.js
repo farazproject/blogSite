@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "@/components/header/header";
+import postList from "@/components/header/header";
 
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -21,7 +21,7 @@ export default function Home() {
       
     >
 
-      <Header/>
+      <postList/>
 
     </div>
   );

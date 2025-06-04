@@ -14,7 +14,7 @@ function Navlink({name,url}){
         return(
             
             <li className="text-black">
-                <Link href={url}>{name}</Link>
+                <Link href={url}>  {name}  </Link>
             </li>
             
         )
