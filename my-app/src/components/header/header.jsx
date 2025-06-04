@@ -7,7 +7,7 @@ import Navlink from "./navlink.jsx";
 function Header(){
 
     const navLinks = [
-        { name: 'Home', url: '/home' },
+        { name: 'Home', url: '/' },
         { name: 'Cart', url: '/shopping-cart' },
         { name: 'Contact', url: '/contact'},
     ]
