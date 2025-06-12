@@ -5,6 +5,7 @@ import PostsList from "@/components/list/postList";
 import Header from "@/components/header/header";
 import { Geist, Geist_Mono } from "next/font/google";
 import List from "@/components/list/list";
+import ProductList from "./product-list";
 
 
 const geistSans = Geist({
@@ -25,11 +26,12 @@ export default function Home() {
 
       <Header/>
       
-      <List/>
-        <Counter/>
-   <Authen/> 
+      {/* <List/>
+      <Counter/>
+       <Authen/> 
 
-    <PostsList/>
+       <PostsList/> */}
+      <ProductList/>
 
     </div>
   );
